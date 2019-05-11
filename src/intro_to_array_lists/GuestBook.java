@@ -52,10 +52,12 @@ public class GuestBook implements MouseListener {
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
 if (e.getSource()== addname) {
+	JButton ButtonPressed = (JButton) e.getSource();
 	String g = JOptionPane.showInputDialog("Enter a name");
 	System.out.println("Danny Davis");
-Guestbook.add(g);}
-else if (e.getSource()==viewname) {
+Guestbook.add(g);
+}
+else if (ButtonPressed==viewname) {
 	for (int i = 0; i <Guestbook.size(); i++) {
 		JOptionPane.showMessageDialog(null, Guestbook.get(i));getClass();
 		
