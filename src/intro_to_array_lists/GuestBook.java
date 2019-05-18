@@ -32,6 +32,8 @@ public class GuestBook implements MouseListener {
 		frame.add(panel);
 		frame.setVisible(true);
 		frame.pack();
+		GuestBook g = new GuestBook();
+		g.guestBook();
 		
 		// Guest #1: Bob Banders
 		
@@ -50,19 +52,23 @@ public class GuestBook implements MouseListener {
 	}
 	@Override
 	public void mousePressed(MouseEvent e) {
+	
+		JButton ButtonPressed = (JButton) e.getSource();
+		String a = null;
 		// TODO Auto-generated method stub
-if (e.getSource()== addname) {
-	JButton ButtonPressed = (JButton) e.getSource();
+if (ButtonPressed== addname) {
+	
 	String g = JOptionPane.showInputDialog("Enter a name");
-	System.out.println("Danny Davis");
+	System.out.println(g);
 Guestbook.add(g);
 }
 else if (ButtonPressed==viewname) {
+
 	for (int i = 0; i <Guestbook.size(); i++) {
-		JOptionPane.showMessageDialog(null, Guestbook.get(i));getClass();
-		
+		a=a+"Guest# :"+(i+1)+"Guest# :"+(i+1)+ 
+				Guestbook.get(i);
 	}
-}
+	JOptionPane.showMessageDialog(null, a);}
 }		
 	
 	
